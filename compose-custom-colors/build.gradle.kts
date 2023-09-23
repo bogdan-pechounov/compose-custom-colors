@@ -1,6 +1,11 @@
+import com.android.build.gradle.internal.utils.createPublishingInfoForLibrary
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+
+    // publish
+    id("maven-publish")
 }
 
 android {
@@ -67,3 +72,19 @@ dependencies {
     // Harmonize
     implementation("com.google.android.material:material:1.9.0")
 }
+
+// publish
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "com.github.bogdan-pechounov"
+                artifactId = "compose-custom-colors"
+                version = "0.1"
+
+                from(components["release"])
+            }
+        }
+    }
+}
+
