@@ -2,7 +2,7 @@
 
 Material design 3 custom colors with Jetpack Compose. Harmonization is enabled by default.
 
-[![alt text](Screenshot.png)]
+![alt text](Screenshot.png)
 
 ## Usage
 ```kotlin
