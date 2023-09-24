@@ -49,7 +49,7 @@ dependencyResolutionManagement {
 Add dependency.
 ```kotlin
 dependencies {
-    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.3"
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.3")
 }
 ```
 
