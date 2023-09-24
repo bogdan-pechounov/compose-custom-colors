@@ -1,5 +1,6 @@
 package com.uzential.customcolors.ui.components.tone
 
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -75,14 +76,7 @@ fun ThemeRowItem(
         modifier = modifier
             .background(color)
             .clickable {
-                val hexColor = java.lang.String.format("#%08X", -0x1 and color.toArgb())
-                Toast
-                    .makeText(
-                        context,
-                        hexColor,
-                        Toast.LENGTH_SHORT
-                    )
-                    .show()
+                color.showToast(context)
             }
     ) {
         Text(
@@ -92,6 +86,18 @@ fun ThemeRowItem(
             textAlign = TextAlign.Center
         )
     }
+}
+
+fun Color.showToast(context: Context){
+    val hexValue = 0xFFFFFF and this.toArgb()
+    val hexColor = java.lang.String.format("#%06X", hexValue)
+    Toast
+        .makeText(
+            context,
+            hexColor,
+            Toast.LENGTH_SHORT
+        )
+        .show()
 }
 
 @Preview
