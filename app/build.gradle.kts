@@ -68,5 +68,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation(project(mapOf("path" to ":compose-custom-colors")))
-    //implementation("com.github.bogdan-pechounov:compose-custom-colors:0.4")
+//    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.4")
 }

@@ -5,6 +5,7 @@ Material design 3 custom colors with Jetpack Compose. Harmonization is enabled b
 ![alt text](Screenshot.png)
 
 ## Usage
+
 ```kotlin
 @Composable
 fun Example() {
@@ -30,8 +31,8 @@ private fun Item(){
 }
 ```
 
-
 ## Import
+
 In `settings.gradle.kts`, add `maven { setUrl("https://jitpack.io") }`.
 
 ```kotlin
@@ -40,19 +41,21 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        
+
         maven { setUrl("https://jitpack.io") }
     }
 }
 ```
 
 Add dependency.
+
 ```kotlin
 dependencies {
-    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.3")
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.5.1")
 }
 ```
 
 ## Questions
+
 depend only on primary
-change text selection 
+change text selection
