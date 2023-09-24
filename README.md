@@ -2,7 +2,7 @@
 
 Material design 3 custom colors with Jetpack Compose. Harmonization is enabled by default.
 
-[![alt text](Screenshot.png)]
+![alt text](Screenshot.png)
 
 ## Usage
 ```kotlin
@@ -43,6 +43,13 @@ dependencyResolutionManagement {
         
         maven { setUrl("https://jitpack.io") }
     }
+}
+```
+
+Add dependency.
+```kotlin
+dependencies {
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.3"
 }
 ```
 
