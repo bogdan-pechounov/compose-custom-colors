@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.utils.createPublishingInfoForLibrary
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -79,7 +77,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.bogdan-pechounov"
             artifactId = "compose-custom-colors"
-            version = "0.7"
+            version = "0.8"
 
             afterEvaluate {
                 from(components["release"])

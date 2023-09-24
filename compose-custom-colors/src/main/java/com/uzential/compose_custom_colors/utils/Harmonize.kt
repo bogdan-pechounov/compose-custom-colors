@@ -17,10 +17,10 @@ val Color.harmonized
 
 
 fun CustomColorScheme.harmonize(with: Color) = CustomColorScheme(
-    customColor = customColor.harmonize(with),
-    onCustomColor = onCustomColor.harmonize(with),
-    customColorContainer = customColorContainer.harmonize(with),
-    onCustomColorContainer = onCustomColorContainer.harmonize(with)
+    color = color.harmonize(with),
+    onColor = onColor.harmonize(with),
+    colorContainer = colorContainer.harmonize(with),
+    onColorContainer = onColorContainer.harmonize(with)
 )
 
 val CustomColorScheme.harmonized

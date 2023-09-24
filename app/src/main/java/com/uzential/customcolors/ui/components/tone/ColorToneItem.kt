@@ -19,7 +19,7 @@ import com.uzential.compose_custom_colors.utils.tone
 
 @Composable
 fun ColorToneItem(tone: Tone){
-    val backgroundColor = LocalCustomColorScheme.current.customColor.tone(tone)
+    val backgroundColor = LocalCustomColorScheme.current.color.tone(tone)
     val textColor = if(backgroundColor.luminance() > 0.5) Color.Black else Color.White
 
     Box(

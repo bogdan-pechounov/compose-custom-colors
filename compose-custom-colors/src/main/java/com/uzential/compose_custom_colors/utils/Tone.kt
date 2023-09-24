@@ -8,7 +8,7 @@ import com.smarttoolfactory.extendedcolors.md3.hct.Hct
 // TODO result is slightly incorrect
 fun Color.tone(tone: Int): Color {
     val camColor = Cam16.fromInt(this.toArgb())
-    val colorTone = Hct.from(camColor.hue, camColor.chroma, tone.toDouble()).toInt()
+    val colorTone = Hct.from(camColor.hue, camColor.chroma, tone.toDouble()).toInt() // TODO max(48, chroma)?
     return Color(colorTone)
 }
 

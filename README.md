@@ -9,7 +9,7 @@ Material design 3 custom colors with Jetpack Compose. Harmonization is enabled b
 ```kotlin
 @Composable
 fun Example() {
-    CustomColorScheme(color = Color.Yellow) { // darkTheme = isSystemInDarkTheme(), harmonize = true
+    CustomColorScheme(color = Color.Blue) { // darkTheme = isSystemInDarkTheme(), harmonize = true
         Column {
             Item()
         }
@@ -17,15 +17,15 @@ fun Example() {
 }
 
 @Composable
-private fun Item(){
-    val colorScheme = LocalCustomColorScheme.current
+private fun Item() {
+    // val customColorScheme = LocalCustomColorScheme.current
 
     Surface(
-        color = colorScheme.customColorContainer
+        color = customColorScheme.colorContainer
     ) {
         Text(
             text = "Example item",
-            color = colorScheme.onCustomColorContainer
+            color = customColorScheme.onColorContainer
         )
     }
 }
@@ -51,7 +51,7 @@ Add dependency.
 
 ```kotlin
 dependencies {
-    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.7")
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.8")
 }
 ```
 

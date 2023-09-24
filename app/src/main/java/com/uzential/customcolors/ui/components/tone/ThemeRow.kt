@@ -15,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,26 +38,26 @@ fun ThemeRow() {
         ThemeRowItem(
             modifier = modifier,
             text = "Custom Color",
-            color = colorScheme.customColor,
-            onColor = colorScheme.onCustomColor
+            color = colorScheme.color,
+            onColor = colorScheme.onColor
         )
         ThemeRowItem(
             modifier = modifier,
             text = "On Custom Color",
-            color = colorScheme.onCustomColor,
-            onColor = colorScheme.customColor
+            color = colorScheme.onColor,
+            onColor = colorScheme.color
         )
         ThemeRowItem(
             modifier = modifier,
             text = "Custom Color Container",
-            color = colorScheme.customColorContainer,
-            onColor = colorScheme.onCustomColorContainer
+            color = colorScheme.colorContainer,
+            onColor = colorScheme.onColorContainer
         )
         ThemeRowItem(
             modifier = modifier,
             text = "On Custom Container",
-            color = colorScheme.onCustomColorContainer,
-            onColor = colorScheme.customColorContainer
+            color = colorScheme.onColorContainer,
+            onColor = colorScheme.colorContainer
         )
     }
 }
