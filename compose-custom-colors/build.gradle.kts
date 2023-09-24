@@ -74,17 +74,16 @@ dependencies {
 }
 
 // publish
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                groupId = "com.github.bogdan-pechounov"
-                artifactId = "compose-custom-colors"
-                version = "0.2"
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.bogdan-pechounov"
+            artifactId = "compose-custom-colors"
+            version = "0.3"
 
-                from(components["release"])
-            }
+            from(components["java"])
         }
     }
 }
+
 
