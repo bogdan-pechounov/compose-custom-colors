@@ -30,4 +30,5 @@ fun Color.darkCustomColorScheme(): CustomColorScheme {
     )
 }
 
+fun Color.customColorScheme(darkTheme: Boolean) = if (darkTheme) darkCustomColorScheme() else lightCustomColorScheme()
 

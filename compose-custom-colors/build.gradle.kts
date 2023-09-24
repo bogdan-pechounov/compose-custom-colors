@@ -79,7 +79,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.bogdan-pechounov"
             artifactId = "compose-custom-colors"
-            version = "0.5.1"
+            version = "0.6"
 
             afterEvaluate {
                 from(components["release"])

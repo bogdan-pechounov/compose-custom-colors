@@ -51,13 +51,14 @@ Add dependency.
 
 ```kotlin
 dependencies {
-    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.5.1")
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.6")
 }
 ```
 
 ## Questions
 
 Should `selectionColors` be updated like in `MaterialTheme`?
+
 ```kotlin
 @Composable
 fun MaterialTheme(
