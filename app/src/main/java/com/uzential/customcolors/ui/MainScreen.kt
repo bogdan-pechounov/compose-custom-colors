@@ -13,8 +13,23 @@ import com.uzential.compose_custom_colors.ui.CustomColorScheme
 import com.uzential.customcolors.ui.components.tone.ColorToneList
 import com.uzential.customcolors.ui.components.tone.ThemeSection
 
+val colors = listOf(Color.Yellow, Color.Red, Color.Green, Color.Blue)
+
 @Composable
 fun MainScreen() {
-    ThemeSection()
+    var color by remember {
+        mutableStateOf(Color.Yellow)
+    }
+    Column {
+        Button(onClick = {
+            color = colors.filter { it != color }.random()
+        }) {
+            Text("Change color")
+        }
 
+        ThemeSection(
+            colorName = "Color",
+            color = color
+        )
+    }
 }

@@ -51,7 +51,7 @@ Add dependency.
 
 ```kotlin
 dependencies {
-    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.6")
+    implementation("com.github.bogdan-pechounov:compose-custom-colors:0.7")
 }
 ```
 
