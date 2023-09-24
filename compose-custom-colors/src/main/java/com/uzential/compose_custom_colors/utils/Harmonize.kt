@@ -8,13 +8,9 @@ import com.google.android.material.color.MaterialColors
 
 fun Color.harmonize(with: Color) = Color(MaterialColors.harmonize(this.toArgb(), with.toArgb()))
 
-// TODO only need to harmonize with primary color?
 val Color.harmonized
     @Composable
     get() = harmonize(MaterialTheme.colorScheme.primary)
-
-
-
 
 fun CustomColorScheme.harmonize(with: Color) = CustomColorScheme(
     color = color.harmonize(with),

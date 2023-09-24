@@ -107,13 +107,3 @@ private fun Preview() {
         }
     }
 }
-
-fun test(){
-    Toast
-        .makeText(
-            context,
-            hexColor,
-            Toast.LENGTH_SHORT
-        )
-        .show()
-}
