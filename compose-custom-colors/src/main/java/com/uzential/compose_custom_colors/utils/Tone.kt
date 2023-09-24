@@ -1,18 +1,25 @@
 package com.uzential.compose_custom_colors.utils
 
+import android.annotation.SuppressLint
+import androidx.annotation.ColorInt
+import androidx.annotation.IntRange
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import com.smarttoolfactory.extendedcolors.md3.hct.Cam16
-import com.smarttoolfactory.extendedcolors.md3.hct.Hct
+import com.google.android.material.color.utilities.Hct
 
-// TODO result is slightly incorrect
-fun Color.tone(tone: Int): Color {
-    val camColor = Cam16.fromInt(this.toArgb())
-    val colorTone = Hct.from(camColor.hue, camColor.chroma, tone.toDouble()).toInt() // TODO max(48, chroma)?
-    return Color(colorTone)
+fun Color.tone(@IntRange(from = 0, to = 100) tone: Int): Color {
+    return Color(getColorRole(this.toArgb(), tone))
 }
 
 fun Color.tone(tone: Tone) = tone(tone.value)
+
+@SuppressLint("RestrictedApi")
+@ColorInt
+private fun getColorRole(@ColorInt color: Int, @IntRange(from = 0, to = 100) tone: Int): Int {
+    val hctColor = Hct.fromInt(color)
+    hctColor.tone = tone.toDouble()
+    return hctColor.toInt()
+}
 
 enum class Tone(val value: Int) {
     TONE_0(0),

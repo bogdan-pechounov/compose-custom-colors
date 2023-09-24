@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -74,11 +75,14 @@ fun ThemeRowItem(
         modifier = modifier
             .background(color)
             .clickable {
-                Toast.makeText(
-                    context,
-                    color.value.toString(16),
-                    Toast.LENGTH_SHORT
-                ).show()
+                val hexColor = java.lang.String.format("#%08X", -0x1 and color.toArgb())
+                Toast
+                    .makeText(
+                        context,
+                        hexColor,
+                        Toast.LENGTH_SHORT
+                    )
+                    .show()
             }
     ) {
         Text(
@@ -102,4 +106,14 @@ private fun Preview() {
             ThemeRow()
         }
     }
+}
+
+fun test(){
+    Toast
+        .makeText(
+            context,
+            hexColor,
+            Toast.LENGTH_SHORT
+        )
+        .show()
 }

@@ -65,7 +65,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // Tones
-    implementation("com.github.SmartToolFactory:Compose-Extended-Colors:1.0.0-alpha07")
+    //implementation("com.github.SmartToolFactory:Compose-Extended-Colors:1.0.0-alpha07")
 
     // Harmonize
     implementation("com.google.android.material:material:1.9.0")
@@ -77,7 +77,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.bogdan-pechounov"
             artifactId = "compose-custom-colors"
-            version = "0.8"
+            version = "0.9"
 
             afterEvaluate {
                 from(components["release"])
