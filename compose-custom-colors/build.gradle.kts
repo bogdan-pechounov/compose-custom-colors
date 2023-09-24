@@ -79,9 +79,11 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.bogdan-pechounov"
             artifactId = "compose-custom-colors"
-            version = "0.3"
+            version = "0.4"
 
-            from(components["java"])
+            afterEvaluate {
+                artifact(tasks.getByName("bundleReleaseAar"))
+            }
         }
     }
 }
