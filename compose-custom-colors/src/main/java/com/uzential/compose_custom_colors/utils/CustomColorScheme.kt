@@ -10,22 +10,20 @@ data class CustomColorScheme(
 )
 
 fun Color.lightCustomColorScheme(): CustomColorScheme {
-    val palette = tonalPalette()
     return CustomColorScheme(
-        color = palette.color40,
-        onColor = palette.color100,
-        colorContainer = palette.color90,
-        onColorContainer = palette.color10
+        color = tone(Tone.TONE_40),
+        onColor = tone(Tone.TONE_100),
+        colorContainer = tone(Tone.TONE_90),
+        onColorContainer = tone(Tone.TONE_10)
     )
 }
 
 fun Color.darkCustomColorScheme(): CustomColorScheme {
-    val palette = tonalPalette()
     return CustomColorScheme(
-        color = palette.color80,
-        onColor = palette.color20,
-        colorContainer = palette.color30,
-        onColorContainer = palette.color90
+        color = tone(Tone.TONE_80),
+        onColor = tone(Tone.TONE_20),
+        colorContainer = tone(Tone.TONE_30),
+        onColorContainer = tone(Tone.TONE_90)
     )
 }
 
